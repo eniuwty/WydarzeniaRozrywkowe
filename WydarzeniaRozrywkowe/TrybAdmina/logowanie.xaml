@@ -1,0 +1,24 @@
+﻿<Page x:Class="WydarzeniaRozrywkowe.TrybAdmina.logowanie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="logowanie" Height="196" Width="266" 
+        KeyDown="logowanie_esc"
+        Background="#C0C0C0">
+    <Grid>
+
+        <TextBlock  FontSize="17" FontWeight="Bold" Height="30" Width="50"  Margin="10,10,206,140" TextWrapping="Wrap" Text="login" />
+        <TextBlock  Margin="10,51,166,99" Height="30" Width="90" TextWrapping="Wrap" FontSize="17" FontWeight="Bold" Text="password" />
+        <TextBox x:Name="textbox_login"  Margin="113,13,0,147" TextWrapping="Wrap" Text="" Height="20"  Width="120"/>
+        <PasswordBox x:Name="textbox_password"  Margin="112,56,0,104"  Height="20" Width="120"/>
+        <Button x:Name="button_Zaloguj" FontSize="17" Content="Zaloguj"  Margin="73,90,73,50"  Width="120" Height="40" Click="Button_zaloguj_click"/>
+
+
+
+
+
+
+    </Grid>
+</Page>

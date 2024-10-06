@@ -1,0 +1,18 @@
+﻿<Page x:Class="WydarzeniaRozrywkowe.Nawigacja.NawigacjaAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WydarzeniaRozrywkowe.Nawigacja"
+      mc:Ignorable="d" 
+      d:DesignHeight="150" d:DesignWidth="940"
+      Title="NawigacjaAdmin">
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button x:Name="ButtonWyloguj" Content="Wyloguj" HorizontalAlignment="Left" Margin="707,55,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="ButtonWyloguj_Click" FontSize="17"/>
+        <Button x:Name="ButtonZarzadzanieWydarzeniami" Content="Zarządzaj Wydarzeniami" HorizontalAlignment="Left" Margin="270,55,0,0" VerticalAlignment="Top" Width="200" Height="45" Click="ButtonZarzadzanieWydarzeniami_Click" FontSize="17"/>
+        <Button x:Name="ButtonZarzadzaniePracownikami" Content="Zarządzaj Pracownikami" HorizontalAlignment="Left" Margin="54,55,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="ButtonZarzadzaniePracownikami_Click" FontSize="17"/>
+        <Button x:Name="ButtonGlowna" Content="Strona Główna" HorizontalAlignment="Left" Margin="490,55,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="ButtonGlowna_Click" FontSize="17"/>
+
+    </Grid>
+</Page>

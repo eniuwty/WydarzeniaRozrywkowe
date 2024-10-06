@@ -1,0 +1,81 @@
+﻿<Page x:Class="WydarzeniaRozrywkowe.TrybAdmina.Zarządzanie_wydarzeniami.EdytujWydarzenie"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="EdytujWydarzenie"
+      KeyDown="Cofnij_esc"
+      Background="#C0C0C0">
+
+    <Grid>
+
+
+        <TextBlock Text="Nazwa" FontSize="15" FontWeight="Bold" Height="20" Margin="10,14,590,466"/>
+        <TextBox x:Name="NazwaTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="10,34,0,446"/>
+
+        <TextBlock Text="Opis" FontWeight="Bold" FontSize="15" Margin="10,59,590,421" Height="20"/>
+        <TextBox x:Name="OpisTextBox" Width="200" Height="50" HorizontalAlignment="Left" Margin="10,84,0,366"/>
+
+        <TextBlock Text="Maksymalna ilość osób" FontSize="15" FontWeight="Bold" Margin="10,139,589,341" Height="20"/>
+        <TextBox x:Name="MaksIloscTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="10,164,0,316"/>
+
+        <TextBlock Text="Cena biletu" FontWeight="Bold" FontSize="15" Margin="10,189,590,291" Height="20"/>
+        <TextBox x:Name="CenaBiletuTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="10,214,0,266"/>
+
+        <TextBlock Text="Data" FontWeight="Bold" FontSize="15" Margin="10,239,590,241" Height="20"/>
+        <TextBox x:Name="DataTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="10,264,0,216"/>
+
+        <TextBlock Text="Godzina" FontSize="15" FontWeight="Bold" Margin="10,289,590,191" Height="20"/>
+        <TextBox x:Name="GodzinaTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="10,314,0,166"/>
+
+        <TextBlock Text="Miasto" FontWeight="Bold" FontSize="15" Margin="265,14,335,466" Height="20"/>
+        <TextBox x:Name="MiastoTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="265,34,0,446"/>
+
+        <TextBlock Text="Adres" FontWeight="Bold" FontSize="15" Margin="265,59,335,421" Height="20"/>
+        <TextBox x:Name="AdresTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="265,79,0,401"/>
+
+        <TextBlock Text="Kod pocztowy" FontWeight="Bold" FontSize="15" Margin="265,109,335,371" Height="20"/>
+        <TextBox x:Name="KodPocztowyTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="265,134,0,346"/>
+
+        <TextBlock Text="Nazwa obiektu" FontWeight="Bold" FontSize="15" Margin="265,164,340,316" Height="20"/>
+        <TextBox x:Name="NazwaObiektuTextBox" Width="200" HorizontalAlignment="Left" Height="20" Margin="265,189,0,291"/>
+
+        <!-- Section for managing employees -->
+
+        <ListBox x:Name="AvailableEmployeesListBox" Margin="265,239,0,157" Width="250" Height="100" MouseDoubleClick="MouseDoubleCLick_avalibleEmployees" HorizontalAlignment="Left">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Imie}" Margin="5"/>
+                        <TextBlock Text="{Binding Nazwisko}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Content="Dodaj" Click="AddEmployee_Click" Margin="445,351,285,97" FontSize="17" Height="50" Width="70"/>
+        <Button Content="Usuń" Click="RemoveEmployee_Click" Margin="540,352,190,98" FontSize="17" Height="50" Width="70" Background="Red" Foreground="White" />
+
+        <ListBox x:Name="AssignedEmployeesListBox" Width="250" Height="100" Margin="540,239,0,159" MouseDoubleClick="MouseDoubleClick_assignedEmployees" HorizontalAlignment="Left">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Imie}" Margin="5"/>
+                        <TextBlock Text="{Binding Nazwisko}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+
+        <Button Content="Zapisz Zmiany" FontSize="17" Height="60" Click="Zapisz_Click" Margin="36,357,631,81"/>
+        <Button x:Name="button_anuluj" FontSize="17" Content="Anuluj" Click="Anuluj_Click" Margin="200,360,519,82"/>
+        <Label Content="Dostępni pracownicy" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="265,214,0,0" VerticalAlignment="Top"/>
+        <Label Content="Pracownicy przy wydarzeniu" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="540,214,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Page>

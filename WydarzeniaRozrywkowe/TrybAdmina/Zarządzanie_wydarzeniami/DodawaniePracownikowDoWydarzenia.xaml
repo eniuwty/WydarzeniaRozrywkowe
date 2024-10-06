@@ -1,0 +1,44 @@
+﻿<Page x:Class="WydarzeniaRozrywkowe.TrybAdmina.Zarządzanie_wydarzeniami.DodawaniePracownikowDoWydarzenia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WydarzeniaRozrywkowe.TrybAdmina.Zarządzanie_wydarzeniami"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DodawaniePracownikowDoWydarzenia"
+      KeyDown="DodawaniePracownikowDoWYdarzenia_Esc"
+      Background="#C0C0C0">
+
+    <Grid>
+
+
+        <Label Content="Pracownicy do dodania" FontSize="15" Height="30" Width="200"   Margin="42,37,558,383" />
+        <Label Content="Dodani pracownicy"  FontSize="15" Height="30" Width="200" Margin="440,37,160,383" RenderTransformOrigin="0.612,0.573" />
+
+        <ListView x:Name="ListViewListaPracownikow" Width="300" Height="200" MouseDoubleClick="ListViewListaPracownikow_MouseDoubleClick" Margin="42,78,458,172">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id_Pracownik}"/>
+                    <GridViewColumn Header="Imię" DisplayMemberBinding="{Binding Imie}"/>
+                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding Nazwisko}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView x:Name="ListViewDodaniPracownicy" Width="300" Height="200" MouseDoubleClick="ListViewDodaniPracownicy_MouseDoubleClick" Margin="440,78,60,172">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id_Pracownik}"/>
+                    <GridViewColumn Header="Imię" DisplayMemberBinding="{Binding Imie}"/>
+                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding Nazwisko}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Dodaj pracownika do wydarzenia" FontSize="17"   Click="ButtonDodawanieClick" Margin="480,303,60,87" Height="60" Width="260"/>
+        <Button Content="Usuń zaznaczonego pracownika"  Click="ButtonUsuwanieClick" Margin="480,368,60,22" Width="260" Height="60" FontSize="17" Background="Red" Foreground="White"/>
+        <Button Content="Cofnij do Menu Admina" x:Name="Button_Cofnij" Click="ButtonCofnij"  Margin="42,368,558,22" FontSize="17"   Height="60" Width="200"/>
+        <Button x:Name="ButtonGotowe" Content="Gotowe" FontSize="17"  Margin="42,303,558,87" Height="60" Width="200" RenderTransformOrigin="0.429,3.577" Click="ButtonGotowe_Click"/>
+    </Grid>
+</Page>
